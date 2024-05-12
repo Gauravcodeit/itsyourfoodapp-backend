@@ -8,16 +8,15 @@ app.use(cors());
 
 
 app.get('/api/restaurants', (req, res) => {
-  const { lat, lng } = req.query;
+   const { lat, lng } = req.query;
   console.log(req.query);
-  const url = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${lat}&lng=${lng}&page_type=DESKTOP_WEB_LISTING`;
-
+  const url = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${lat}&lng=${lng}&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`;
   fetch(url, {
     headers: {
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*',
       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
-    
+
     }
   })
     .then(response => {
@@ -42,9 +41,9 @@ app.get('/api/menu', (req, res) => {
 
   /* OLD SWIGGY API
   const url = `https://www.swiggy.com/dapi/menu/v4/full?lat=${lat}&lng=${lng}&menuId=${menuId}`;
-  */ 
+  */
 
-  const url = `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=${lat}&lng=${lng}&submitAction=ENTER&restaurantId=${restaurantId}`;
+  const url = `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=${lat}&lng=${lng}&restaurantId=${restaurantId}`;
 
 
   fetch(url, {
@@ -52,7 +51,7 @@ app.get('/api/menu', (req, res) => {
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*',
       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
-    
+
     }
   })
     .then(response => {
@@ -75,7 +74,7 @@ app.get('/api/menu', (req, res) => {
 
 
 app.get('/', (req, res) =>{
-  res.json({"test":"hello instafood lovers !!! "});
+  res.json({"test":"hello itsyourfoodhub-server lovers !!! "});
 })
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);

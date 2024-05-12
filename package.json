@@ -1,7 +1,7 @@
 {
-  "name": "instafood-server",
+  "name": "itsyourfoodhub-server",
   "version": "1.0.0",
-  "description": "A node.js web server that fetches data from a third-party (Swiggy) API and exposes it to a client (instafood) app via an HTTP endpoint.\"",
+  "description": "A node.js web server that fetches data from a third-party (Swiggy) API and exposes it to a client (itsyourfoodhub-server) app via an HTTP endpoint.\"",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Learn-React-With-Harshi/instafood-server.git"
+    "url": "git+https://github.com/Gauravcodeit/web-server.git"
   },
   "author": "Harshitha SV",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Learn-React-With-Harshi/instafood-server/issues"
+    "url": "https://github.com/Gauravcodeit/web-server/issues"
   },
-  "homepage": "https://github.com/Learn-React-With-Harshi/instafood-server#readme",
+  "homepage": "https://github.com/Gauravcodeit/web-server#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "cross-fetch": "^3.1.5",
